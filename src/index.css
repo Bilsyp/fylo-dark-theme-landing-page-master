@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --intro-and-email-sign-up-background: hsl(217, 28%, 15%);
+  --main-background: hsl(218, 28%, 13%);
+  --footer-background: hsl(216, 53%, 9%);
+  --testimonials-background: hsl(219, 30%, 18%);
+
+  --green-gradient: hsl(176, 68%, 64%);
+  --blue-gradient: hsl(198, 60%, 50%);
+  --error: hsl(0, 100%, 63%);
+}
+
+@layer components {
+  .hero_content {
+    @apply h-screen relative justify-center items-center flex bg-Darkers overflow-hidden   p-3;
+  }
+  ul li {
+    @apply hover:text-white hover:underline duration-150 cursor-pointer;
+  }
+  .descrition {
+    @apply text-center mb-40 text-white;
+  }
+  .deskripsi {
+    @apply text-white;
+  }
+  .deskripsi h2 {
+    @apply font-OpenSans text-xl py-2  font-semibold;
+  }
+  .deskripsi p {
+    @apply max-w-sm font-Railway text-[0.89rem];
+  }
+  .Testimonials_container {
+    @apply flex justify-center items-center flex-col px-4 pb-[20rem] gap-[2rem] md:flex-row  md:px-14;
+  }
+  .info {
+    @apply flex flex-col my-10 gap-3 md:grid grid-cols-2;
+  }
+
+  .info li {
+    @apply flex  items-center gap-3 my-1;
+  }
+  .info li p {
+    @apply text-[15px] max-w-[260px] font-Railway;
+  }
+  .info li:nth-child(1) {
+    @apply row-span-2;
+  }
+  .info li:nth-child(1) p {
+    @apply text-[12px] md:text-[11px] leading-6;
+  }
+  .list_info {
+    @apply flex flex-col gap-8 md:grid grid-cols-3 mt-6;
+  }
+  .list_info ul li {
+    @apply my-4 font-Railway;
+  }
+  .side-box {
+    @apply absolute w-[80%] md:w-[60%] top-[-160px] px-3 py-[1rem] text-center left-[50%] translate-x-[-50%] bg-testimonial rounded-md;
+  }
+  .side-box h1 {
+    @apply text-xl md:text-4xl font-semibold pt-3 font-Railway;
+  }
+  .side-box p {
+    @apply text-arcticle text-sm py-7 mx-auto;
+  }
+}
+@layer base {
+  section {
+    @apply bg-veryDark;
+  }
+}
+
+.testimonial:nth-child(1) {
+  position: relative;
+}
+
+.hero_content::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  background: url("/images/bg-curvy-mobile.svg") center center/cover;
+  bottom: 0;
+}
